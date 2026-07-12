@@ -1,4 +1,4 @@
-from flask import Flask, request
+from flask import Flask, request,render_template
 import sqlite3
 
 app = Flask(__name__)
@@ -29,7 +29,7 @@ def login():
     conn.close()
 
     if user:
-        return "Login Successful"
+        return render_template("dashboard_b.html")
     else:
         return "Invalid Email or Password"
     
