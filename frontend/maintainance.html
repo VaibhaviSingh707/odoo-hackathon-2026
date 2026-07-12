@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Maintenance</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<div class="sidebar">
+
+<div class="logo">AssetFlow ERP</div>
+
+<ul>
+
+<li><a href="dashboard.html"><i class="fa fa-chart-line"></i> Dashboard</a></li>
+
+<li><a href="organization.html"><i class="fa fa-building"></i> Organization Setup</a></li>
+
+<li><a href="assets.html"><i class="fa fa-box"></i> Asset Management</a></li>
+
+<li><a href="booking.html"><i class="fa fa-calendar-check"></i> Resource Booking</a></li>
+
+<li class="active"><a href="maintenance.html"><i class="fa fa-screwdriver-wrench"></i> Maintenance</a></li>
+
+<li><a href="audit.html"><i class="fa fa-clipboard-check"></i> Audit</a></li>
+
+<li><a href="login.html"><i class="fa fa-right-from-bracket"></i> Logout</a></li>
+
+</ul>
+
+</div>
+
+<div class="main">
+
+<div class="topbar">
+
+<h2>Maintenance Requests</h2>
+
+</div>
+
+<div class="content">
+
+<div class="card-box">
+
+<div class="d-flex justify-content-between mb-3">
+
+<input id="maintenanceSearch" class="form-control w-25"
+placeholder="Search Request"
+onkeyup="searchMaintenance()">
+
+<button class="btn btn-primary"
+data-bs-toggle="modal"
+data-bs-target="#maintenanceModal"
+onclick="clearMaintenanceForm()">
+
+<i class="fa fa-plus"></i>
+
+Raise Request
+
+</button>
+
+</div>
+
+<table class="table table-bordered table-hover">
+
+<thead class="table-dark">
+
+<tr>
+
+<th>Request ID</th>
+
+<th>Asset</th>
+
+<th>Problem</th>
+
+<th>Requested By</th>
+
+<th>Priority</th>
+
+<th>Status</th>
+
+<th width="150">Action</th>
+
+</tr>
+
+</thead>
+
+<tbody id="maintenanceTable">
+
+</tbody>
+
+</table>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Modal -->
+
+<div class="modal fade" id="maintenanceModal">
+
+<div class="modal-dialog">
+
+<div class="modal-content">
+
+<div class="modal-header">
+
+<h5>Raise Maintenance Request</h5>
+
+<button class="btn-close" data-bs-dismiss="modal"></button>
+
+</div>
+
+<div class="modal-body">
+
+<div class="mb-3">
+
+<label>Asset</label>
+
+<input id="maintAsset" class="form-control">
+
+</div>
+
+<div class="mb-3">
+
+<label>Problem</label>
+
+<textarea id="maintProblem" class="form-control"></textarea>
+
+</div>
+
+<div class="mb-3">
+
+<label>Requested By</label>
+
+<input id="maintEmployee" class="form-control">
+
+</div>
+
+<div class="mb-3">
+
+<label>Priority</label>
+
+<select id="maintPriority" class="form-select">
+
+<option>Low</option>
+<option>Medium</option>
+<option>High</option>
+
+</select>
+
+</div>
+
+<div class="mb-3">
+
+<label>Status</label>
+
+<select id="maintStatus" class="form-select">
+
+<option>Pending</option>
+<option>Approved</option>
+<option>Rejected</option>
+
+</select>
+
+</div>
+
+</div>
+
+<div class="modal-footer">
+
+<button class="btn btn-secondary" data-bs-dismiss="modal">
+
+Cancel
+
+</button>
+
+<button class="btn btn-primary" onclick="saveMaintenance()">
+
+Save
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="js/maintenance.js"></script>
+
+</body>
+
+</html>
