@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Audit Management</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<div class="sidebar">
+
+<div class="logo">AssetFlow ERP</div>
+
+<ul>
+
+<li><a href="dashboard.html"><i class="fa fa-chart-line"></i> Dashboard</a></li>
+
+<li><a href="organization.html"><i class="fa fa-building"></i> Organization Setup</a></li>
+
+<li><a href="assets.html"><i class="fa fa-box"></i> Asset Management</a></li>
+
+<li><a href="booking.html"><i class="fa fa-calendar-check"></i> Resource Booking</a></li>
+
+<li><a href="maintenance.html"><i class="fa fa-screwdriver-wrench"></i> Maintenance</a></li>
+
+<li class="active"><a href="audit.html"><i class="fa fa-clipboard-check"></i> Audit</a></li>
+
+<li><a href="login.html"><i class="fa fa-right-from-bracket"></i> Logout</a></li>
+
+</ul>
+
+</div>
+
+<div class="main">
+
+<div class="topbar">
+
+<h2>Audit Management</h2>
+
+</div>
+
+<div class="content">
+
+<div class="card-box">
+
+<div class="d-flex justify-content-between mb-3">
+
+<input
+id="auditSearch"
+class="form-control w-25"
+placeholder="Search Audit"
+onkeyup="searchAudit()">
+
+<button
+class="btn btn-primary"
+data-bs-toggle="modal"
+data-bs-target="#auditModal"
+onclick="clearAuditForm()">
+
+<i class="fa fa-plus"></i>
+
+Schedule Audit
+
+</button>
+
+</div>
+
+<table class="table table-bordered table-hover">
+
+<thead class="table-dark">
+
+<tr>
+
+<th>Audit ID</th>
+
+<th>Department</th>
+
+<th>Auditor</th>
+
+<th>Date</th>
+
+<th>Status</th>
+
+<th>Discrepancy</th>
+
+<th width="150">Action</th>
+
+</tr>
+
+</thead>
+
+<tbody id="auditTable">
+
+</tbody>
+
+</table>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Modal -->
+
+<div class="modal fade" id="auditModal">
+
+<div class="modal-dialog">
+
+<div class="modal-content">
+
+<div class="modal-header">
+
+<h5>Schedule Audit</h5>
+
+<button class="btn-close" data-bs-dismiss="modal"></button>
+
+</div>
+
+<div class="modal-body">
+
+<div class="mb-3">
+
+<label>Department</label>
+
+<input id="auditDepartment" class="form-control">
+
+</div>
+
+<div class="mb-3">
+
+<label>Auditor</label>
+
+<input id="auditAuditor" class="form-control">
+
+</div>
+
+<div class="mb-3">
+
+<label>Audit Date</label>
+
+<input type="date" id="auditDate" class="form-control">
+
+</div>
+
+<div class="mb-3">
+
+<label>Status</label>
+
+<select id="auditStatus" class="form-select">
+
+<option>Scheduled</option>
+<option>In Progress</option>
+<option>Completed</option>
+
+</select>
+
+</div>
+
+<div class="mb-3">
+
+<label>Discrepancy</label>
+
+<textarea id="auditRemark" class="form-control"></textarea>
+
+</div>
+
+</div>
+
+<div class="modal-footer">
+
+<button class="btn btn-secondary" data-bs-dismiss="modal">
+
+Cancel
+
+</button>
+
+<button class="btn btn-primary" onclick="saveAudit()">
+
+Save
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="js/audit.js"></script>
+
+</body>
+
+</html>

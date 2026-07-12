@@ -1,0 +1,159 @@
+body{
+    margin:0;
+    font-family:'Segoe UI',sans-serif;
+    background:#f5f7fb;
+}
+
+/* Sidebar */
+
+.sidebar{
+    width:250px;
+    background:#1e293b;
+    position:fixed;
+    top:0;
+    left:0;
+    bottom:0;
+    color:white;
+}
+
+.logo{
+    padding:20px;
+    font-size:22px;
+    font-weight:bold;
+    text-align:center;
+    background:#0f172a;
+}
+
+.sidebar ul{
+    list-style:none;
+    padding:0;
+    margin-top:20px;
+}
+
+.sidebar ul li{
+    padding:15px 25px;
+    cursor:pointer;
+}
+
+.sidebar ul li:hover{
+    background:#334155;
+}
+
+.sidebar ul li.active{
+    background:#0d6efd;
+}
+
+.sidebar a{
+    color:white;
+    text-decoration:none;
+    display:block;
+}
+
+/* Main */
+
+.main{
+    margin-left:250px;
+}
+
+/* Navbar */
+
+.topbar{
+    background:white;
+    padding:15px 25px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 2px 8px rgba(0,0,0,.08);
+}
+
+.page-title{
+    font-size:24px;
+    font-weight:bold;
+}
+
+/* Content */
+
+.content{
+    padding:25px;
+}
+
+/* Cards */
+
+.card-box{
+    background:white;
+    border-radius:12px;
+    padding:20px;
+    box-shadow:0 2px 8px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.card-box:hover{
+    transform:translateY(-3px);
+}
+
+.card-title{
+    color:gray;
+}
+
+.card-value{
+    font-size:34px;
+    font-weight:bold;
+}
+
+/* Table */
+
+.table-box{
+    background:white;
+    padding:20px;
+    border-radius:12px;
+    margin-top:30px;
+    box-shadow:0 2px 8px rgba(0,0,0,.08);
+}
+
+.login-body{
+
+background:#f3f6fb;
+
+}
+
+.left-panel{
+
+background:linear-gradient(135deg,#0d6efd,#003c8f);
+
+color:white;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+padding:50px;
+
+}
+
+.login-card{
+
+width:420px;
+
+background:white;
+
+padding:40px;
+
+border-radius:15px;
+
+box-shadow:0 10px 30px rgba(0,0,0,.15);
+
+}
+
+.form-control{
+
+height:45px;
+
+}
+
+.btn-primary{
+
+height:45px;
+
+}
